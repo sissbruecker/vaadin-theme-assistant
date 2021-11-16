@@ -1,0 +1,21 @@
+{
+  "elementName": "vaadin-progress-bar",
+  "displayName": "Vaadin Progress Bar",
+  "parts": [
+    {
+      "name": "bar",
+      "description": "Progress-bar's background"
+    },
+    {
+      "name": "value",
+      "description": "Progress-bar's foreground"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "indeterminate",
+      "description": "Set to an indeterminate progress bar",
+      "partName": ":host"
+    }
+  ]
+}

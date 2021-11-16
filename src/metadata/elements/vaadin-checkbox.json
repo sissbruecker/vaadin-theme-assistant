@@ -1,0 +1,55 @@
+{
+  "elementName": "vaadin-checkbox",
+  "displayName": "Vaadin Checkbox",
+  "parts": [
+    {
+      "name": "container",
+      "description": "The container element."
+    },
+    {
+      "name": "checkbox",
+      "description": "The wrapper element that contains slotted <input type=\"checkbox\">."
+    },
+    {
+      "name": "label",
+      "description": "The wrapper element that contains slotted <label>."
+    }
+  ],
+  "states": [
+    {
+      "attribute": "active",
+      "description": "Set when the checkbox is pressed down, either with mouse, touch or the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set when the checkbox is disabled.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the checkbox is focused using the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the checkbox is focused.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "indeterminate",
+      "description": "Set when the checkbox is in the indeterminate state.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "checked",
+      "description": "Set when the checkbox is checked.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "has-label",
+      "description": "Set when the checkbox has a label.",
+      "partName": ":host"
+    }
+  ]
+}

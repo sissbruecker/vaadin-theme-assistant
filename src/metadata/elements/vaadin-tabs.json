@@ -1,0 +1,30 @@
+{
+  "elementName": "vaadin-tabs",
+  "displayName": "Vaadin Tabs",
+  "parts": [
+    {
+      "name": "back-button",
+      "description": "Button for moving the scroll back"
+    },
+    {
+      "name": "tabs",
+      "description": "The tabs container"
+    },
+    {
+      "name": "forward-button",
+      "description": "Button for moving the scroll forward"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "orientation",
+      "description": "Tabs disposition, valid values are `horizontal` and `vertical`.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "overflow",
+      "description": "It's set to `start`, `end`, none or both.",
+      "partName": ":host"
+    }
+  ]
+}

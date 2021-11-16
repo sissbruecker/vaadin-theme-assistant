@@ -1,0 +1,11 @@
+{
+  "elementName": "vaadin-list-box",
+  "displayName": "Vaadin List Box",
+  "parts": [
+    {
+      "name": "items",
+      "description": "The items container"
+    }
+  ],
+  "states": []
+}

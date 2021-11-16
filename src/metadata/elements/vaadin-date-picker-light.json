@@ -1,0 +1,11 @@
+{
+  "elementName": "vaadin-date-picker-light",
+  "displayName": "Vaadin Date Picker Light",
+  "parts": [
+    {
+      "name": "overlay-content",
+      "description": "The overlay element"
+    }
+  ],
+  "states": []
+}

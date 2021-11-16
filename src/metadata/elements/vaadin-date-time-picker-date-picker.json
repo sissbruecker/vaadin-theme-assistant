@@ -1,0 +1,44 @@
+{
+  "elementName": "vaadin-date-time-picker-date-picker",
+  "displayName": "Vaadin Date Time Picker / Date Picker",
+  "parts": [
+    {
+      "name": "input-field",
+      "description": "Input element"
+    },
+    {
+      "name": "clear-button",
+      "description": "Clear button"
+    },
+    {
+      "name": "toggle-button",
+      "description": "Toggle button"
+    },
+    {
+      "name": "overlay-content",
+      "description": "The overlay element"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "invalid",
+      "description": "Set when the element is invalid",
+      "partName": ":host"
+    },
+    {
+      "attribute": "opened",
+      "description": "Set when the date selector overlay is opened",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set when the element is readonly",
+      "partName": ":host"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set when the element is disabled",
+      "partName": ":host"
+    }
+  ]
+}

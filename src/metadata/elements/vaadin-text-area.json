@@ -1,0 +1,73 @@
+{
+  "elementName": "vaadin-text-area",
+  "displayName": "Vaadin Text Area",
+  "parts": [
+    {
+      "name": "label",
+      "description": "The label element wrapper"
+    },
+    {
+      "name": "input-field",
+      "description": "The element that wraps prefix, textarea and suffix"
+    },
+    {
+      "name": "error-message",
+      "description": "The error message element wrapper"
+    },
+    {
+      "name": "helper-text",
+      "description": "The helper text element wrapper"
+    },
+    {
+      "name": "clear-button",
+      "description": "The clear button element"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "disabled",
+      "description": "Set when the element is disabled",
+      "partName": ":host"
+    },
+    {
+      "attribute": "has-value",
+      "description": "Set when the element has a value",
+      "partName": ":host"
+    },
+    {
+      "attribute": "has-label",
+      "description": "Set when the element has a label",
+      "partName": ":host"
+    },
+    {
+      "attribute": "has-helper",
+      "description": "Set when the element has helper text",
+      "partName": ":host"
+    },
+    {
+      "attribute": "has-error-message",
+      "description": "Set when the element has an error message",
+      "partName": ":host"
+    },
+    {
+      "attribute": "invalid",
+      "description": "Set when the element is invalid",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the element is focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the element is keyboard focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set when the element is readonly",
+      "partName": ":host"
+    }
+  ]
+}

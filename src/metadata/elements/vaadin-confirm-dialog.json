@@ -1,0 +1,19 @@
+{
+  "elementName": "vaadin-confirm-dialog",
+  "displayName": "Vaadin Confirm Dialog",
+  "parts": [
+    {
+      "name": "header",
+      "description": "Header of the confirmation dialog"
+    },
+    {
+      "name": "message",
+      "description": "Container for the message of the dialog"
+    },
+    {
+      "name": "footer",
+      "description": "Container for the buttons"
+    }
+  ],
+  "states": []
+}

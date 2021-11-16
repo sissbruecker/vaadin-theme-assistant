@@ -1,0 +1,37 @@
+{
+  "elementName": "vaadin-grid-pro-edit-select",
+  "displayName": "Vaadin Grid Pro Edit Select",
+  "parts": [
+    {
+      "name": "toggle-button",
+      "description": "The toggle button"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "opened",
+      "description": "Set when the select is open",
+      "partName": ":host"
+    },
+    {
+      "attribute": "invalid",
+      "description": "Set when the element is invalid",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the element is focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the element is keyboard focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set when the select is read only",
+      "partName": ":host"
+    }
+  ]
+}

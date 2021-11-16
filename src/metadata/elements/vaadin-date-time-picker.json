@@ -1,0 +1,26 @@
+{
+  "elementName": "vaadin-date-time-picker",
+  "displayName": "Vaadin Date Time Picker",
+  "parts": [
+    {
+      "name": "date",
+      "description": "Date picker element"
+    },
+    {
+      "name": "time",
+      "description": "Time picker element"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "disabled",
+      "description": "Set when the element is disabled",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set when the element is read-only",
+      "partName": ":host"
+    }
+  ]
+}

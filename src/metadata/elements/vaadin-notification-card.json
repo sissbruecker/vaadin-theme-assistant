@@ -1,0 +1,15 @@
+{
+  "elementName": "vaadin-notification-card",
+  "displayName": "Vaadin Notification Card",
+  "parts": [
+    {
+      "name": "overlay",
+      "description": "The notification container"
+    },
+    {
+      "name": "content",
+      "description": "The content of the notification"
+    }
+  ],
+  "states": []
+}

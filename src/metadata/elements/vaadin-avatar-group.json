@@ -1,0 +1,15 @@
+{
+  "elementName": "vaadin-avatar-group",
+  "displayName": "Vaadin Avatar Group",
+  "parts": [
+    {
+      "name": "container",
+      "description": "The container element"
+    },
+    {
+      "name": "avatar",
+      "description": "Individual avatars"
+    }
+  ],
+  "states": []
+}

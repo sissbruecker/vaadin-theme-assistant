@@ -1,0 +1,57 @@
+{
+  "elementName": "vaadin-date-time-picker-time-picker",
+  "displayName": "Vaadin Date Time Picker / Time Picker",
+  "parts": [
+    {
+      "name": "clear-button",
+      "description": "The clear button"
+    },
+    {
+      "name": "input-field",
+      "description": "Input element wrapper"
+    },
+    {
+      "name": "toggle-button",
+      "description": "The toggle button"
+    },
+    {
+      "name": "label",
+      "description": "The label element"
+    },
+    {
+      "name": "error-message",
+      "description": "The error message element"
+    },
+    {
+      "name": "helper-text",
+      "description": "The helper text element wrapper"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "disabled",
+      "description": "Set to a disabled time picker",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set to a read only time picker",
+      "partName": ":host"
+    },
+    {
+      "attribute": "invalid",
+      "description": "Set when the element is invalid",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the element is focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the element is keyboard focused",
+      "partName": ":host"
+    }
+  ]
+}

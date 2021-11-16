@@ -1,0 +1,30 @@
+{
+  "elementName": "vaadin-overlay",
+  "displayName": "Vaadin Overlay",
+  "parts": [
+    {
+      "name": "backdrop",
+      "description": "Backdrop of the overlay"
+    },
+    {
+      "name": "overlay",
+      "description": "Container for position/sizing/alignment of the content"
+    },
+    {
+      "name": "content",
+      "description": "Content of the overlay"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "opening",
+      "description": "Applied just after the overlay is attached to the DOM. You can apply a CSS @keyframe animation for this state.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "closing",
+      "description": "Applied just before the overlay is detached from the DOM. You can apply a CSS @keyframe animation for this state.",
+      "partName": ":host"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "elementName": "vaadin-split-layout",
+  "displayName": "Vaadin Split Layout",
+  "parts": [
+    {
+      "name": "splitter",
+      "description": "Split element"
+    },
+    {
+      "name": "handle",
+      "description": "The handle of the splitter"
+    }
+  ],
+  "states": []
+}

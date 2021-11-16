@@ -1,0 +1,11 @@
+{
+  "elementName": "vaadin-form-item",
+  "displayName": "Vaadin Form Item",
+  "parts": [
+    {
+      "name": "label",
+      "description": "The label slot container"
+    }
+  ],
+  "states": []
+}

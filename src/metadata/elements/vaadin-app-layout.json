@@ -1,0 +1,19 @@
+{
+  "elementName": "vaadin-app-layout",
+  "displayName": "Vaadin App Layout",
+  "parts": [
+    {
+      "name": "navbar",
+      "description": "Container for the navigation bar"
+    },
+    {
+      "name": "drawer",
+      "description": "Container for the drawer area"
+    },
+    {
+      "name": "content",
+      "description": "Container for page content."
+    }
+  ],
+  "states": []
+}

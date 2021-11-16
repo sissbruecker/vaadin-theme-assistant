@@ -1,0 +1,52 @@
+{
+  "elementName": "vaadin-month-calendar",
+  "displayName": "Vaadin Month Calendar",
+  "parts": [
+    {
+      "name": "month-header",
+      "description": "vaadin-month-calendar"
+    },
+    {
+      "name": "weekdays",
+      "description": "vaadin-month-calendar"
+    },
+    {
+      "name": "weekday",
+      "description": "vaadin-month-calendar"
+    },
+    {
+      "name": "week-numbers",
+      "description": "vaadin-month-calendar"
+    },
+    {
+      "name": "week-number",
+      "description": "vaadin-month-calendar"
+    },
+    {
+      "name": "date",
+      "description": "vaadin-month-calendar"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "today",
+      "description": "Set on the date corresponding to the current day",
+      "partName": "date"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set on the focused date",
+      "partName": "date"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set on the date out of the allowed range",
+      "partName": "date"
+    },
+    {
+      "attribute": "selected",
+      "description": "Set on the selected date",
+      "partName": "date"
+    }
+  ]
+}

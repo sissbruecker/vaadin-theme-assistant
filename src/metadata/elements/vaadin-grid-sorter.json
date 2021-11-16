@@ -1,0 +1,25 @@
+{
+  "elementName": "vaadin-grid-sorter",
+  "displayName": "Vaadin Grid Sorter",
+  "parts": [
+    {
+      "name": "content",
+      "description": "The slotted content wrapper"
+    },
+    {
+      "name": "indicators",
+      "description": "The internal sorter indicators."
+    },
+    {
+      "name": "order",
+      "description": "The internal sorter order"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "direction",
+      "description": "Sort direction of a sorter",
+      "partName": ":host"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "elementName": "vaadin-tab",
+  "displayName": "Vaadin Tab",
+  "parts": [],
+  "states": [
+    {
+      "attribute": "disabled",
+      "description": "Set to a disabled tab",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the element is focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the element is keyboard focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "selected",
+      "description": "Set when the tab is selected",
+      "partName": ":host"
+    },
+    {
+      "attribute": "active",
+      "description": "Set when mousedown or enter/spacebar pressed",
+      "partName": ":host"
+    },
+    {
+      "attribute": "orientation",
+      "description": "Set to `horizontal` or `vertical` depending on the direction of items",
+      "partName": ":host"
+    }
+  ]
+}

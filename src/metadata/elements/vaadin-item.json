@@ -1,0 +1,37 @@
+{
+  "elementName": "vaadin-item",
+  "displayName": "Vaadin Item",
+  "parts": [
+    {
+      "name": "content",
+      "description": "The element that wraps the slot"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "disabled",
+      "description": "Set to a disabled item",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the element is focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the element is keyboard focused",
+      "partName": ":host"
+    },
+    {
+      "attribute": "selected",
+      "description": "Set when the item is selected",
+      "partName": ":host"
+    },
+    {
+      "attribute": "active",
+      "description": "Set when mousedown or enter/spacebar pressed",
+      "partName": ":host"
+    }
+  ]
+}

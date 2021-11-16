@@ -1,0 +1,21 @@
+{
+  "elementName": "vaadin-avatar",
+  "displayName": "Vaadin Avatar",
+  "parts": [
+    {
+      "name": "abbr",
+      "description": "The abbreviation element"
+    },
+    {
+      "name": "icon",
+      "description": "The icon element"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "has-color-index",
+      "description": "Set when the avatar has `colorIndex` and the corresponding custom CSS property exists.",
+      "partName": ":host"
+    }
+  ]
+}

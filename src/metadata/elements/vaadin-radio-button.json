@@ -1,0 +1,50 @@
+{
+  "elementName": "vaadin-radio-button",
+  "displayName": "Vaadin Radio Button",
+  "parts": [
+    {
+      "name": "container",
+      "description": "The container element."
+    },
+    {
+      "name": "radio",
+      "description": "The wrapper element that contains slotted `<input type=\"radio\">`."
+    },
+    {
+      "name": "label",
+      "description": "The wrapper element that contains slotted `<label>`."
+    }
+  ],
+  "states": [
+    {
+      "attribute": "active",
+      "description": "Set when the radio button is pressed down, either with a pointer or the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set when the radio button is disabled.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the radio button is focused using the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the radio button is focused.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "checked",
+      "description": "Set when the radio button is checked.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "has-label",
+      "description": "Set when the radio button has a label.",
+      "partName": ":host"
+    }
+  ]
+}

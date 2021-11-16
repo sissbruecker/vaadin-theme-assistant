@@ -1,0 +1,11 @@
+{
+  "elementName": "vaadin-message-list",
+  "displayName": "Vaadin Message List",
+  "parts": [
+    {
+      "name": "list",
+      "description": "The container wrapping messages."
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,40 @@
+{
+  "elementName": "vaadin-message-input-button",
+  "displayName": "Vaadin Message Input Button",
+  "parts": [
+    {
+      "name": "label",
+      "description": "The label (text) inside the button."
+    },
+    {
+      "name": "prefix",
+      "description": "A slot for content before the label (e.g. an icon)."
+    },
+    {
+      "name": "suffix",
+      "description": "A slot for content after the label (e.g. an icon)."
+    }
+  ],
+  "states": [
+    {
+      "attribute": "active",
+      "description": "Set when the button is pressed down, either with mouse, touch or the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set when the button is disabled.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the button is focused using the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the button is focused.",
+      "partName": ":host"
+    }
+  ]
+}

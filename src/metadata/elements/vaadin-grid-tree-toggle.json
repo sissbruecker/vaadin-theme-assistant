@@ -1,0 +1,22 @@
+{
+  "elementName": "vaadin-grid-tree-toggle",
+  "displayName": "Vaadin Grid Tree Toggle",
+  "parts": [
+    {
+      "name": "toggle",
+      "description": "The tree toggle icon"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "expanded",
+      "description": "When present, the toggle is expanded",
+      "partName": ":host"
+    },
+    {
+      "attribute": "leaf",
+      "description": "When present, the toggle is not expandable, i. e., the current item is a leaf",
+      "partName": ":host"
+    }
+  ]
+}

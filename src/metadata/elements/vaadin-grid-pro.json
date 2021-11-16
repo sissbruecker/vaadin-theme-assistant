@@ -1,0 +1,150 @@
+{
+  "elementName": "vaadin-grid-pro",
+  "displayName": "Vaadin Grid Pro",
+  "parts": [
+    {
+      "name": "row",
+      "description": "Row in the internal table"
+    },
+    {
+      "name": "cell",
+      "description": "Cell in the internal table"
+    },
+    {
+      "name": "header-cell",
+      "description": "Header cell in the internal table"
+    },
+    {
+      "name": "body-cell",
+      "description": "Body cell in the internal table"
+    },
+    {
+      "name": "footer-cell",
+      "description": "Footer cell in the internal table"
+    },
+    {
+      "name": "details-cell",
+      "description": "Row details cell in the internal table"
+    },
+    {
+      "name": "resize-handle",
+      "description": "Handle for resizing the columns"
+    },
+    {
+      "name": "reorder-ghost",
+      "description": "Ghost element of the header cell being dragged"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "loading",
+      "description": "Set when the grid is loading data from data provider",
+      "partName": ":host"
+    },
+    {
+      "attribute": "interacting",
+      "description": "Keyboard navigation in interaction mode",
+      "partName": ":host"
+    },
+    {
+      "attribute": "navigating",
+      "description": "Keyboard navigation in navigation mode",
+      "partName": ":host"
+    },
+    {
+      "attribute": "overflow",
+      "description": "Set when rows are overflowing the grid viewport. Possible values: `top`, `bottom`, `left`, `right`",
+      "partName": ":host"
+    },
+    {
+      "attribute": "reordering",
+      "description": "Set when the grid's columns are being reordered",
+      "partName": ":host"
+    },
+    {
+      "attribute": "dragover",
+      "description": "Set when the grid (not a specific row) is dragged over",
+      "partName": ":host"
+    },
+    {
+      "attribute": "dragging-rows",
+      "description": "Set when grid rows are dragged",
+      "partName": ":host"
+    },
+    {
+      "attribute": "reorder-status",
+      "description": "Reflects the status of a cell while columns are being reordered",
+      "partName": "cell"
+    },
+    {
+      "attribute": "frozen",
+      "description": "Frozen cell",
+      "partName": "cell"
+    },
+    {
+      "attribute": "last-frozen",
+      "description": "Last frozen cell",
+      "partName": "cell"
+    },
+    {
+      "attribute": "first-column",
+      "description": "First visible cell on a row",
+      "partName": "cell"
+    },
+    {
+      "attribute": "last-column",
+      "description": "Last visible cell on a row",
+      "partName": "cell"
+    },
+    {
+      "attribute": "selected",
+      "description": "Selected row",
+      "partName": "row"
+    },
+    {
+      "attribute": "expanded",
+      "description": "Expanded row",
+      "partName": "row"
+    },
+    {
+      "attribute": "details-opened",
+      "description": "Row with details open",
+      "partName": "row"
+    },
+    {
+      "attribute": "loading",
+      "description": "Row that is waiting for data from data provider",
+      "partName": "row"
+    },
+    {
+      "attribute": "odd",
+      "description": "Odd row",
+      "partName": "row"
+    },
+    {
+      "attribute": "first",
+      "description": "The first body row",
+      "partName": "row"
+    },
+    {
+      "attribute": "dragstart",
+      "description": "Set for one frame when drag of a row is starting. The value is a number when multiple rows are dragged",
+      "partName": "row"
+    },
+    {
+      "attribute": "dragover",
+      "description": "Set when the row is dragged over",
+      "partName": "row"
+    },
+    {
+      "attribute": "drag-disabled",
+      "description": "Set to a row that isn't available for dragging",
+      "partName": "row"
+    },
+    {
+      "attribute": "drop-disabled",
+      "description": "Set to a row that can't be dropped on top of",
+      "partName": "row"
+    }
+  ]
+}

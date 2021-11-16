@@ -1,0 +1,60 @@
+{
+  "elementName": "vaadin-date-picker",
+  "displayName": "Vaadin Date Picker",
+  "parts": [
+    {
+      "name": "label",
+      "description": "The label element"
+    },
+    {
+      "name": "required-indicator",
+      "description": "The required indicator"
+    },
+    {
+      "name": "input-field",
+      "description": "The element that wraps prefix, value and suffix"
+    },
+    {
+      "name": "error-message",
+      "description": "The error message element"
+    },
+    {
+      "name": "helper-text",
+      "description": "The helper text element"
+    },
+    {
+      "name": "clear-button",
+      "description": "Clear button"
+    },
+    {
+      "name": "toggle-button",
+      "description": "Toggle button"
+    },
+    {
+      "name": "overlay-content",
+      "description": "The overlay element"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "invalid",
+      "description": "Set when the element is invalid",
+      "partName": ":host"
+    },
+    {
+      "attribute": "opened",
+      "description": "Set when the date selector overlay is opened",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set when the element is readonly",
+      "partName": ":host"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set when the element is disabled",
+      "partName": ":host"
+    }
+  ]
+}

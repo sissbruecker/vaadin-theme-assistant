@@ -1,0 +1,59 @@
+{
+  "elementName": "vaadin-date-picker-overlay-content",
+  "displayName": "Vaadin Date Picker Overlay Content",
+  "parts": [
+    {
+      "name": "overlay-header",
+      "description": "Fullscreen mode header"
+    },
+    {
+      "name": "label",
+      "description": "Fullscreen mode value/label"
+    },
+    {
+      "name": "clear-button",
+      "description": "Fullscreen mode clear button"
+    },
+    {
+      "name": "toggle-button",
+      "description": "Fullscreen mode toggle button"
+    },
+    {
+      "name": "years-toggle-button",
+      "description": "Fullscreen mode years scroller toggle"
+    },
+    {
+      "name": "months",
+      "description": "Months scroller"
+    },
+    {
+      "name": "years",
+      "description": "Years scroller"
+    },
+    {
+      "name": "toolbar",
+      "description": "Footer bar with buttons"
+    },
+    {
+      "name": "today-button",
+      "description": "Today button"
+    },
+    {
+      "name": "cancel-button",
+      "description": "Cancel button"
+    },
+    {
+      "name": "month",
+      "description": "Month calendar"
+    },
+    {
+      "name": "year-number",
+      "description": "Year number"
+    },
+    {
+      "name": "year-separator",
+      "description": "Year separator"
+    }
+  ],
+  "states": []
+}

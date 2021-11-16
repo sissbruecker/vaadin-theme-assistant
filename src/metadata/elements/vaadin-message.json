@@ -1,0 +1,23 @@
+{
+  "elementName": "vaadin-message",
+  "displayName": "Vaadin Message",
+  "parts": [
+    {
+      "name": "avatar",
+      "description": "The author's avatar"
+    },
+    {
+      "name": "name",
+      "description": "Author's name"
+    },
+    {
+      "name": "time",
+      "description": "When the message was posted"
+    },
+    {
+      "name": "content",
+      "description": "The message itself as a slotted content"
+    }
+  ],
+  "states": []
+}

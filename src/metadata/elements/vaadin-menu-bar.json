@@ -1,0 +1,19 @@
+{
+  "elementName": "vaadin-menu-bar",
+  "displayName": "Vaadin Menu Bar",
+  "parts": [
+    {
+      "name": "container",
+      "description": "The container wrapping menu bar buttons."
+    },
+    {
+      "name": "menu-bar-button",
+      "description": "The menu bar button."
+    },
+    {
+      "name": "overflow-button",
+      "description": "The \"overflow\" button appearing when menu bar width is not enough to fit all the buttons."
+    }
+  ],
+  "states": []
+}

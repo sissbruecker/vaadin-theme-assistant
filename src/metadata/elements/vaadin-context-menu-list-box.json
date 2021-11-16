@@ -1,0 +1,11 @@
+{
+  "elementName": "vaadin-context-menu-list-box",
+  "displayName": "Vaadin Context Menu List Box",
+  "parts": [
+    {
+      "name": "items",
+      "description": "The items container"
+    }
+  ],
+  "states": []
+}

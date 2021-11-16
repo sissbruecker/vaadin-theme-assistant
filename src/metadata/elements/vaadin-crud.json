@@ -1,0 +1,11 @@
+{
+  "elementName": "vaadin-crud",
+  "displayName": "Vaadin Crud",
+  "parts": [
+    {
+      "name": "toolbar",
+      "description": "Toolbar container at the bottom. By default it contains the the `new` button"
+    }
+  ],
+  "states": []
+}

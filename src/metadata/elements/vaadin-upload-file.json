@@ -1,0 +1,80 @@
+{
+  "elementName": "vaadin-upload-file",
+  "displayName": "Vaadin Upload File",
+  "parts": [
+    {
+      "name": "row",
+      "description": "File container"
+    },
+    {
+      "name": "info",
+      "description": "Container for file status icon, file name, status and error messages"
+    },
+    {
+      "name": "done-icon",
+      "description": "File done status icon"
+    },
+    {
+      "name": "warning-icon",
+      "description": "File warning status icon"
+    },
+    {
+      "name": "meta",
+      "description": "Container for file name, status and error messages"
+    },
+    {
+      "name": "name",
+      "description": "File name"
+    },
+    {
+      "name": "error",
+      "description": "Error message, shown when error happens"
+    },
+    {
+      "name": "status",
+      "description": "Status message"
+    },
+    {
+      "name": "commands",
+      "description": "Container for file command icons"
+    },
+    {
+      "name": "start-button",
+      "description": "Start file upload button"
+    },
+    {
+      "name": "retry-button",
+      "description": "Retry file upload button"
+    },
+    {
+      "name": "remove-button",
+      "description": "Remove file button"
+    },
+    {
+      "name": "progress",
+      "description": "Progress bar"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "error",
+      "description": "An error has happened during uploading",
+      "partName": ":host"
+    },
+    {
+      "attribute": "indeterminate",
+      "description": "Uploading is in progress, but the progress value is unknown",
+      "partName": ":host"
+    },
+    {
+      "attribute": "uploading",
+      "description": "Uploading is in progress",
+      "partName": ":host"
+    },
+    {
+      "attribute": "complete",
+      "description": "Uploading has finished successfully",
+      "partName": ":host"
+    }
+  ]
+}

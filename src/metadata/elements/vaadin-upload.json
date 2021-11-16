@@ -1,0 +1,48 @@
+{
+  "elementName": "vaadin-upload",
+  "displayName": "Vaadin Upload",
+  "parts": [
+    {
+      "name": "primary-buttons",
+      "description": "Upload container"
+    },
+    {
+      "name": "upload-button",
+      "description": "Upload button"
+    },
+    {
+      "name": "drop-label",
+      "description": "Label for drop indicator"
+    },
+    {
+      "name": "drop-label-icon",
+      "description": "Icon for drop indicator"
+    },
+    {
+      "name": "file-list",
+      "description": "File list container"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "nodrop",
+      "description": "Set when drag and drop is disabled (e. g., on touch devices)",
+      "partName": ":host"
+    },
+    {
+      "attribute": "dragover",
+      "description": "A file is being dragged over the element",
+      "partName": ":host"
+    },
+    {
+      "attribute": "dragover-valid",
+      "description": "A dragged file is valid with `maxFiles` and `accept` criteria",
+      "partName": ":host"
+    },
+    {
+      "attribute": "max-files-reached",
+      "description": "The maximum number of files that the user is allowed to add to the upload has been reached",
+      "partName": ":host"
+    }
+  ]
+}

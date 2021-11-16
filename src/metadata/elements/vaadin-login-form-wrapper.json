@@ -1,0 +1,35 @@
+{
+  "elementName": "vaadin-login-form-wrapper",
+  "displayName": "Vaadin Login Form Wrapper",
+  "parts": [
+    {
+      "name": "form",
+      "description": "Container for the entire component's content"
+    },
+    {
+      "name": "form-title",
+      "description": "Title of the login form"
+    },
+    {
+      "name": "error-message",
+      "description": "Container for error message, contains error-message-title and error-message-description parts. Hidden by default."
+    },
+    {
+      "name": "error-message-title",
+      "description": "Container for error message title"
+    },
+    {
+      "name": "error-message-description",
+      "description": "Container for error message description"
+    },
+    {
+      "name": "error-message-description",
+      "description": "Container for error message description"
+    },
+    {
+      "name": "footer",
+      "description": "Container additional information text from `i18n` object"
+    }
+  ],
+  "states": []
+}

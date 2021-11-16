@@ -1,0 +1,22 @@
+{
+  "elementName": "vaadin-combo-box-item",
+  "displayName": "Vaadin Combo Box Item",
+  "parts": [
+    {
+      "name": "content",
+      "description": "The element that wraps the item content"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "selected",
+      "description": "Set when the item is selected",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the item is focused",
+      "partName": ":host"
+    }
+  ]
+}

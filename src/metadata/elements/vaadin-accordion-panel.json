@@ -1,0 +1,44 @@
+{
+  "elementName": "vaadin-accordion-panel",
+  "displayName": "Vaadin Accordion Panel",
+  "parts": [
+    {
+      "name": "summary",
+      "description": "The element used to open and close collapsible content."
+    },
+    {
+      "name": "toggle",
+      "description": "The element used as indicator, can represent an icon."
+    },
+    {
+      "name": "summary-content",
+      "description": "The wrapper for the slotted summary content."
+    },
+    {
+      "name": "content",
+      "description": "The wrapper for the collapsible panel content."
+    }
+  ],
+  "states": [
+    {
+      "attribute": "opened",
+      "description": "Set when the collapsible content is expanded and visible.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "disabled",
+      "description": "Set when the element is disabled.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focus-ring",
+      "description": "Set when the element is focused using the keyboard.",
+      "partName": ":host"
+    },
+    {
+      "attribute": "focused",
+      "description": "Set when the element is focused.",
+      "partName": ":host"
+    }
+  ]
+}

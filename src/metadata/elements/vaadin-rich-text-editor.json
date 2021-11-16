@@ -1,0 +1,159 @@
+{
+  "elementName": "vaadin-rich-text-editor",
+  "displayName": "Vaadin Rich Text Editor",
+  "parts": [
+    {
+      "name": "content",
+      "description": "The content wrapper"
+    },
+    {
+      "name": "toolbar",
+      "description": "The toolbar wrapper"
+    },
+    {
+      "name": "toolbar-group",
+      "description": "The group for toolbar controls"
+    },
+    {
+      "name": "toolbar-group-history",
+      "description": "The group for histroy controls"
+    },
+    {
+      "name": "toolbar-group-emphasis",
+      "description": "The group for emphasis controls"
+    },
+    {
+      "name": "toolbar-group-heading",
+      "description": "The group for heading controls"
+    },
+    {
+      "name": "toolbar-group-glyph-transformation",
+      "description": "The group for glyph transformation controls"
+    },
+    {
+      "name": "toolbar-group-group-list",
+      "description": "The group for group list controls"
+    },
+    {
+      "name": "toolbar-group-alignment",
+      "description": "The group for alignment controls"
+    },
+    {
+      "name": "toolbar-group-rich-text",
+      "description": "The group for rich text controls"
+    },
+    {
+      "name": "toolbar-group-block",
+      "description": "The group for preformatted block controls"
+    },
+    {
+      "name": "toolbar-group-format",
+      "description": "The group for format controls"
+    },
+    {
+      "name": "toolbar-button",
+      "description": "The toolbar button (applies to all buttons)"
+    },
+    {
+      "name": "toolbar-button-undo",
+      "description": "The \"undo\" button"
+    },
+    {
+      "name": "toolbar-button-redo",
+      "description": "The \"redo\" button"
+    },
+    {
+      "name": "toolbar-button-bold",
+      "description": "The \"bold\" button"
+    },
+    {
+      "name": "toolbar-button-italic",
+      "description": "The \"italic\" button"
+    },
+    {
+      "name": "toolbar-button-underline",
+      "description": "The \"underline\" button"
+    },
+    {
+      "name": "toolbar-button-strike",
+      "description": "The \"strike-through\" button"
+    },
+    {
+      "name": "toolbar-button-h1",
+      "description": "The \"header 1\" button"
+    },
+    {
+      "name": "toolbar-button-h2",
+      "description": "The \"header 2\" button"
+    },
+    {
+      "name": "toolbar-button-h3",
+      "description": "The \"header 3\" button"
+    },
+    {
+      "name": "toolbar-button-subscript",
+      "description": "The \"subscript\" button"
+    },
+    {
+      "name": "toolbar-button-superscript",
+      "description": "The \"superscript\" button"
+    },
+    {
+      "name": "toolbar-button-list-ordered",
+      "description": "The \"ordered list\" button"
+    },
+    {
+      "name": "toolbar-button-list-bullet",
+      "description": "The \"bullet list\" button"
+    },
+    {
+      "name": "toolbar-button-align-left",
+      "description": "The \"left align\" button"
+    },
+    {
+      "name": "toolbar-button-align-center",
+      "description": "The \"center align\" button"
+    },
+    {
+      "name": "toolbar-button-align-right",
+      "description": "The \"right align\" button"
+    },
+    {
+      "name": "toolbar-button-image",
+      "description": "The \"image\" button"
+    },
+    {
+      "name": "toolbar-button-link",
+      "description": "The \"link\" button"
+    },
+    {
+      "name": "toolbar-button-blockquote",
+      "description": "The \"blockquote\" button"
+    },
+    {
+      "name": "toolbar-button-code-block",
+      "description": "The \"code block\" button"
+    },
+    {
+      "name": "toolbar-button-clean",
+      "description": "The \"clean formatting\" button"
+    }
+  ],
+  "states": [
+    {
+      "attribute": "disabled",
+      "description": "Set to a disabled text editor",
+      "partName": ":host"
+    },
+    {
+      "attribute": "readonly",
+      "description": "Set to a readonly text editor",
+      "partName": ":host"
+    },
+    {
+      "attribute": "on",
+      "description": "Set to a toolbar button applied to the selected text",
+      "partName": "toolbar-button"
+    }
+  ]
+}
