@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-board",
   "displayName": "Vaadin Board",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

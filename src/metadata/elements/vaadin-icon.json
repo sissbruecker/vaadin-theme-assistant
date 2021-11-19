@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-icon",
   "displayName": "Vaadin Icon",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

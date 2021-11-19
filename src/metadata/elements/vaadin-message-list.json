@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-message-list",
   "displayName": "Vaadin Message List",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "list",

@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-crud-form",
   "displayName": "Vaadin Crud Form",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-crud"
+  },
   "parts": [],
   "states": []
 }

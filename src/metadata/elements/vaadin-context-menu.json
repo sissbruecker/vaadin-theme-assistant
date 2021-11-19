@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-context-menu",
   "displayName": "Vaadin Context Menu",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

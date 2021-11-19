@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-context-menu-overlay",
   "displayName": "Vaadin Context Menu Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-context-menu"
+  },
   "parts": [
     {
       "name": "backdrop",

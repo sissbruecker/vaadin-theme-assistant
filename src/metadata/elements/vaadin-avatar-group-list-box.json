@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-avatar-group-list-box",
   "displayName": "Vaadin Avatar Group List Box",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "items",

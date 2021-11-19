@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-message-input-button",
   "displayName": "Vaadin Message Input Button",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "label",

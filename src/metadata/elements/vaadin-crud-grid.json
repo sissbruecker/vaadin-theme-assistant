@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-crud-grid",
   "displayName": "Vaadin Crud Grid",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-crud"
+  },
   "parts": [
     {
       "name": "row",

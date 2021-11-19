@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-cookie-consent",
   "displayName": "Vaadin Cookie Consent",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

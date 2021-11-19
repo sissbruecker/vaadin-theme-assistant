@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-checkbox",
   "displayName": "Vaadin Checkbox",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "container",

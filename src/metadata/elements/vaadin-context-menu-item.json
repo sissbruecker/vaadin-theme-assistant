@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-context-menu-item",
   "displayName": "Vaadin Context Menu Item",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-context-menu"
+  },
   "parts": [
     {
       "name": "content",

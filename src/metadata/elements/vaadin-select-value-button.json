@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-select-value-button",
   "displayName": "Vaadin Select Value Button",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "label",

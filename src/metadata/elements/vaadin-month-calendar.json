@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-month-calendar",
   "displayName": "Vaadin Month Calendar",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-date-picker"
+  },
   "parts": [
     {
       "name": "month-header",

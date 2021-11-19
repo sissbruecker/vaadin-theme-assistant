@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-time-picker-item",
   "displayName": "Vaadin Time Picker Item",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-time-picker"
+  },
   "parts": [
     {
       "name": "content",

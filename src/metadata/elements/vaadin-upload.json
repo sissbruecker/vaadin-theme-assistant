@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-upload",
   "displayName": "Vaadin Upload",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "primary-buttons",

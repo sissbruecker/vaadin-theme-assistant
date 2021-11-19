@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-dialog-overlay",
   "displayName": "Vaadin Dialog Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-dialog"
+  },
   "parts": [
     {
       "name": "backdrop",

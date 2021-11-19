@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-accordion-panel",
   "displayName": "Vaadin Accordion Panel",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "summary",

@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-time-picker",
   "displayName": "Vaadin Time Picker",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "clear-button",

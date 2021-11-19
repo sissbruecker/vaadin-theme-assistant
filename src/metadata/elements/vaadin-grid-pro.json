@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-grid-pro",
   "displayName": "Vaadin Grid Pro",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "row",

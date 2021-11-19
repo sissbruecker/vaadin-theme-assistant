@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-menu-bar",
   "displayName": "Vaadin Menu Bar",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "container",

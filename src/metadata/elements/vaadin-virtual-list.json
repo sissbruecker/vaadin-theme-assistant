@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-virtual-list",
   "displayName": "Vaadin Virtual List",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

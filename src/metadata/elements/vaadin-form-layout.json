@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-form-layout",
   "displayName": "Vaadin Form Layout",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

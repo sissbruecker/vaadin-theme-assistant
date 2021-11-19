@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-scroller",
   "displayName": "Vaadin Scroller",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

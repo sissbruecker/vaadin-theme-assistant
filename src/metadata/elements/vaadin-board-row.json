@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-board-row",
   "displayName": "Vaadin Board Row",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

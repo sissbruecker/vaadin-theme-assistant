@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-rich-text-editor",
   "displayName": "Vaadin Rich Text Editor",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "content",

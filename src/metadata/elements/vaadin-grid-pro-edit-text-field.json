@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-grid-pro-edit-text-field",
   "displayName": "Vaadin Grid Pro Edit Text Field",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "label",

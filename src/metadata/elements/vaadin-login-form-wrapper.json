@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-login-form-wrapper",
   "displayName": "Vaadin Login Form Wrapper",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-login-form"
+  },
   "parts": [
     {
       "name": "form",

@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-select",
   "displayName": "Vaadin Select",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

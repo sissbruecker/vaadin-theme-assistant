@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-combo-box-light",
   "displayName": "Vaadin Combo Box Light",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

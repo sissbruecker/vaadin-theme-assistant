@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-app-layout",
   "displayName": "Vaadin App Layout",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "navbar",

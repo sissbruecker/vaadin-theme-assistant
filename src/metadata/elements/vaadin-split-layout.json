@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-split-layout",
   "displayName": "Vaadin Split Layout",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "splitter",

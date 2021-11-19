@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-chart",
   "displayName": "Vaadin Chart",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

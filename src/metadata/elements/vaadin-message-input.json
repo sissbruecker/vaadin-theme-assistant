@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-message-input",
   "displayName": "Vaadin Message Input",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

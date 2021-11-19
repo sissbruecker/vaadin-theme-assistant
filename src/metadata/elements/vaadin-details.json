@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-details",
   "displayName": "Vaadin Details",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "summary",

@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-notification-card",
   "displayName": "Vaadin Notification Card",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-notification"
+  },
   "parts": [
     {
       "name": "overlay",

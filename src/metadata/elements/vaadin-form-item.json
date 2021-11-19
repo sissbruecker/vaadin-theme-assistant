@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-form-item",
   "displayName": "Vaadin Form Item",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "label",

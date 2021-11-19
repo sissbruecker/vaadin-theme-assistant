@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-date-time-picker",
   "displayName": "Vaadin Date Time Picker",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "date",

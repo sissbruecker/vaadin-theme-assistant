@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-progress-bar",
   "displayName": "Vaadin Progress Bar",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "bar",

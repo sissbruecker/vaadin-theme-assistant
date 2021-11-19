@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-checkbox-group",
   "displayName": "Vaadin Checkbox Group",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

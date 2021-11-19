@@ -102,9 +102,31 @@ export interface VaadinElementState {
   partName: string;
 }
 
+export interface VaadinElementThemeSettings {
+  /**
+   * Specifies how individual instances of a component can be themed.
+   * Currently we support:
+   * - Host: The element is accessible from code, and the developer can set a custom theme variant on it
+   * - Theme propagation: The element is a sub-component, and not accessible from code, or within a shadow DOM. However its host element propagates its theme attribute to it.
+   * - None: The element is a sub-component, and not accessible from code, or within a shadow DOM. It it not possible to theme specific instances of this component.
+   *
+   * This setting affects the instructions for how to apply a theme to a specific element instance.
+   */
+  individualThemeMechanism: "host" | "themePropagation" | "none",
+  /**
+   * Specifies from which host component the theme attribute is propagated.
+   *
+   * This setting affects the instructions for how to apply a theme to a specific element instance.
+   *
+   * This setting is only relevant when the `themePropagation` mechanism is used.
+   */
+  themePropagatedFrom?: string
+}
+
 export interface VaadinElementMetaData {
   elementName: string;
   displayName: string;
+  themeSettings: VaadinElementThemeSettings;
   parts: VaadinElementPart[];
   states: VaadinElementState[];
 }

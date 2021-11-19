@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-date-time-picker-time-picker",
   "displayName": "Vaadin Date Time Picker / Time Picker",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-date-time-picker"
+  },
   "parts": [
     {
       "name": "clear-button",

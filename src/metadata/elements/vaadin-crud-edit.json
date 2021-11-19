@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-crud-edit",
   "displayName": "Vaadin Crud Edit",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [],
   "states": []
 }

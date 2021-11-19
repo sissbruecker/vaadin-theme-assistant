@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-radio-button",
   "displayName": "Vaadin Radio Button",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "container",

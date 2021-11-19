@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-horizontal-layout",
   "displayName": "Vaadin Horizontal Layout",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

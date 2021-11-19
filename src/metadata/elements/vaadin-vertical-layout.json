@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-vertical-layout",
   "displayName": "Vaadin Vertical Layout",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

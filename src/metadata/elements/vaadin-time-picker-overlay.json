@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-time-picker-overlay",
   "displayName": "Vaadin Time Picker Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-time-picker"
+  },
   "parts": [
     {
       "name": "backdrop",

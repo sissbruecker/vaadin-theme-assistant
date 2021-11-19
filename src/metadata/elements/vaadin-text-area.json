@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-text-area",
   "displayName": "Vaadin Text Area",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

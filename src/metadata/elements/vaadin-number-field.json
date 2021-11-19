@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-number-field",
   "displayName": "Vaadin Number Field",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

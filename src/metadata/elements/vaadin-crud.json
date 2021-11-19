@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-crud",
   "displayName": "Vaadin Crud",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "toolbar",

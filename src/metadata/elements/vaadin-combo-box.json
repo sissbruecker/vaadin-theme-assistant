@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-combo-box",
   "displayName": "Vaadin Combo Box",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

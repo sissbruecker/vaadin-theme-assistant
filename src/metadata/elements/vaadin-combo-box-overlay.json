@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-combo-box-overlay",
   "displayName": "Vaadin Combo Box Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-combo-box"
+  },
   "parts": [
     {
       "name": "backdrop",

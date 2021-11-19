@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-text-field",
   "displayName": "Vaadin Text Field",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

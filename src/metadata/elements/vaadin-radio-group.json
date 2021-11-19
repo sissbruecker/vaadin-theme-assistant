@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-radio-group",
   "displayName": "Vaadin Radio Group",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "container",

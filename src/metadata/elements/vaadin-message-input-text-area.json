@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-message-input-text-area",
   "displayName": "Vaadin Message Input Text Area",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "label",

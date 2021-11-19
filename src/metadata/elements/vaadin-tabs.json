@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-tabs",
   "displayName": "Vaadin Tabs",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "back-button",

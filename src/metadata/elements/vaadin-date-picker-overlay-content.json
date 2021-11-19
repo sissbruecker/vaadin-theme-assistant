@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-date-picker-overlay-content",
   "displayName": "Vaadin Date Picker Overlay Content",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-date-picker"
+  },
   "parts": [
     {
       "name": "overlay-header",

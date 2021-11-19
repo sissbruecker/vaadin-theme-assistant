@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-login-overlay-wrapper",
   "displayName": "Vaadin Login Overlay Wrapper",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "card",

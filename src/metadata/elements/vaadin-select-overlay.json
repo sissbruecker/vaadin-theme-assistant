@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-select-overlay",
   "displayName": "Vaadin Select Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-select"
+  },
   "parts": [
     {
       "name": "backdrop",

@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-login-form",
   "displayName": "Vaadin Login Form",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

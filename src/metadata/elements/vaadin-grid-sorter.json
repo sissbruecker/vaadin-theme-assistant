@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-grid-sorter",
   "displayName": "Vaadin Grid Sorter",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "content",

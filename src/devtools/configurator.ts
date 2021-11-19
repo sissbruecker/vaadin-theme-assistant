@@ -99,6 +99,9 @@ export class Configurator extends LitElement {
   }
 
   render() {
+    const disableThemeingSpecificInstances =
+      this.suggestion.metaData.themeSettings.individualThemeMechanism ===
+      "none";
     const showStateAttributesSection = this.selectableStates.length > 0;
 
     return html`
@@ -134,8 +137,18 @@ export class Configurator extends LitElement {
               <vaadin-radio-button value="all"
                 >All instances of ${this.suggestion.metaData.displayName}
               </vaadin-radio-button>
-              <vaadin-radio-button value="specific"
-                >Specific instances of ${this.suggestion.metaData.displayName}
+              <vaadin-radio-button
+                value="specific"
+                .disabled="${disableThemeingSpecificInstances}"
+                ><span
+                  >Specific instances of
+                  ${this.suggestion.metaData.displayName}</span
+                >
+                ${disableThemeingSpecificInstances
+                  ? html`<br /><span class="text-xs font-semibold"
+                        >Not possible at the moment</span
+                      >`
+                  : null}
               </vaadin-radio-button>
             </vaadin-radio-group>
             ${this.configuration.useCustomTheme
@@ -199,7 +212,7 @@ export class Configurator extends LitElement {
                       Apply the
                       <code>${this.configuration.customThemeVariant}</code>
                       theme variant to the relevant
-                      ${this.suggestion.metaData.displayName} instances:
+                      ${formatThemeHostElementName(this.suggestion)} instances:
                     </p>
                     <div class="relative">
                       <th-snippet
@@ -275,11 +288,27 @@ const formatStateTitle = (
   return `${subject} has the ${formattedState} state`;
 };
 
+const formatThemeHostElementName = (suggestion: SelectorSuggestion) => {
+  // Either use the host name itself, or mangle the element name that the theme
+  // is propagated from to remove dashes and capitalize the resulting words
+  return suggestion.metaData.themeSettings.individualThemeMechanism === "host"
+    ? suggestion.metaData.displayName
+    : capitalize(
+        suggestion.metaData.themeSettings.themePropagatedFrom!.replace(
+          /-/g,
+          " "
+        )
+      );
+};
+
 const renderWebThemeNameExample = (
   suggestion: SelectorSuggestion,
   themeName: string
 ) => {
-  const elementName = suggestion.metaData.elementName;
+  const elementName =
+    suggestion.metaData.themeSettings.individualThemeMechanism === "host"
+      ? suggestion.metaData.elementName
+      : suggestion.metaData.themeSettings.themePropagatedFrom;
   return `<${elementName} theme="${themeName}">...</${elementName}>`;
 };
 
@@ -287,7 +316,10 @@ const renderJavaThemeNameExample = (
   suggestion: SelectorSuggestion,
   themeName: string
 ) => {
-  const elementName = suggestion.metaData.elementName;
+  const elementName =
+    suggestion.metaData.themeSettings.individualThemeMechanism === "host"
+      ? suggestion.metaData.elementName
+      : suggestion.metaData.themeSettings.themePropagatedFrom!;
   const variableName = toCamel(elementName.replace("vaadin-", ""));
   return `${variableName}.getElement().setAttribute("theme", "${themeName}");`;
 };

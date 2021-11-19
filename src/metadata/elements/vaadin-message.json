@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-message",
   "displayName": "Vaadin Message",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "avatar",

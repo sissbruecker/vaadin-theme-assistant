@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-combo-box-item",
   "displayName": "Vaadin Combo Box Item",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-combo-box"
+  },
   "parts": [
     {
       "name": "content",

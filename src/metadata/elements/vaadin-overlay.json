@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-overlay",
   "displayName": "Vaadin Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "backdrop",

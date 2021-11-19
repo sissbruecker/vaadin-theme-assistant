@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-list-box",
   "displayName": "Vaadin List Box",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "items",

@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-tab",
   "displayName": "Vaadin Tab",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": [
     {

@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-upload-file",
   "displayName": "Vaadin Upload File",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "row",

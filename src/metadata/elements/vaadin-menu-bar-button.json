@@ -1,6 +1,10 @@
 {
   "elementName": "vaadin-menu-bar-button",
   "displayName": "Vaadin Menu Bar Button",
+  "themeSettings": {
+    "individualThemeMechanism": "themePropagation",
+    "themePropagatedFrom": "vaadin-menu-bar"
+  },
   "parts": [
     {
       "name": "label",

@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-drawer-toggle",
   "displayName": "Vaadin Drawer Toggle",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

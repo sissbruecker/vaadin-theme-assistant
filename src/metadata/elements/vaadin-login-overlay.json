@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-login-overlay",
   "displayName": "Vaadin Login Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

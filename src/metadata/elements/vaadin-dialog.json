@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-dialog",
   "displayName": "Vaadin Dialog",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

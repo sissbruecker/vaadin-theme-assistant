@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-notification",
   "displayName": "Vaadin Notification",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [],
   "states": []
 }

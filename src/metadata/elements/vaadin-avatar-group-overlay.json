@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-avatar-group-overlay",
   "displayName": "Vaadin Avatar Group Overlay",
+  "themeSettings": {
+    "individualThemeMechanism": "none"
+  },
   "parts": [
     {
       "name": "backdrop",

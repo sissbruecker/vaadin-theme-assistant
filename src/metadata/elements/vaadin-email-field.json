@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-email-field",
   "displayName": "Vaadin Email Field",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",

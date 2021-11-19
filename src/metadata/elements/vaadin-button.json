@@ -1,6 +1,9 @@
 {
   "elementName": "vaadin-button",
   "displayName": "Vaadin Button",
+  "themeSettings": {
+    "individualThemeMechanism": "host"
+  },
   "parts": [
     {
       "name": "label",
