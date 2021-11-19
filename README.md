@@ -6,6 +6,10 @@ A browser extension that allows to visually identify elements of Vaadin componen
 
 > ⚠️ This software is still in a prototype stage. There are lots of known issues with handling specific Vaadin components, as well as the extension setup itself. Please check the [issues](https://github.com/sissbruecker/vaadin-theme-assistant/issues) for a complete list.
 
+**Demo Video (Youtube ↗)**
+
+[![Watch the video](https://i1.ytimg.com/vi/uKZLLuKwhxU/hqdefault.jpg)](https://youtu.be/uKZLLuKwhxU)
+
 ## Installation
 
 There is no release yet. Follow the Development instructions for installing a development build of the extension in your browser.
