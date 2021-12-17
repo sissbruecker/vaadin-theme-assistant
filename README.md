@@ -56,3 +56,26 @@ There is no release yet. Follow the Development instructions for installing a de
       - Select debug add-on
       - Add temporary add-on
       - Select manifest.json from this folder
+
+## Build
+
+**Requirements**
+- Latest LTS Node version
+- Latest LTS NPM version
+- yarn
+- npx
+- bash
+
+Internally, `web-ext` is used to bundle a distribution package of the extension. You do not need to install `web-ext`.
+
+Run the following bash script to generate a build (might need to make the file executable using `chmod +x build.sh`):
+```
+./build.sh
+```
+
+The script does:
+- Install all dependencies using yarn
+- Runs rollup to transpile and minify source files, with output written to `build`
+- Run web-ext to package the extension for uploading to the Mozilla addon store and Chrome extension store
+
+The packaged extension can be found in the `web-ext-artifacts` folder.
