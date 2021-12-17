@@ -43,7 +43,7 @@ export class ElementPicker {
 
   start() {
     this.lastPickedElement = undefined;
-    this.overlay.setElement(null, "");
+    this.overlay.clearElement();
     this.registerListeners();
   }
 
@@ -55,7 +55,7 @@ export class ElementPicker {
   highlight(suggestion?: SelectorSuggestion) {
     // Clear highlight if no suggestion is provided
     if (!suggestion) {
-      this.overlay.setElement(null, "");
+      this.overlay.clearElement();
       return;
     }
 

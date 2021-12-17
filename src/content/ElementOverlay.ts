@@ -1,8 +1,11 @@
+const OBSERVE_INTERVAL = 100;
+
 export class ElementOverlay {
   private element?: Element;
 
   private overlay!: HTMLElement;
   private label!: HTMLElement;
+  private observeInterval?: number;
 
   constructor() {
     this.initializeDom();
@@ -36,18 +39,20 @@ export class ElementOverlay {
     this.label = label;
   }
 
-  setElement(element: Element | null, labelText: string) {
+  setElement(element: Element, labelText: string) {
     if (this.element == element && labelText === this.label.textContent) return;
 
-    this.element = element || undefined;
-    if (!element) {
-      this.overlay.remove();
-      return;
-    }
-
+    this.element = element;
     document.body.append(this.overlay);
     this.positionOverlay();
     this.label.textContent = labelText;
+    this.startObservingTargetElement();
+  }
+
+  clearElement() {
+    this.element = undefined;
+    this.overlay.remove();
+    this.stopObservingTargetElement();
   }
 
   private positionOverlay() {
@@ -60,5 +65,22 @@ export class ElementOverlay {
     this.overlay.style.height = clientRect.height + "px";
 
     this.label.style.bottom = clientRect.height - 2 + "px";
+  }
+
+  private startObservingTargetElement() {
+    // There is no easy solution for observing the connectedness of an element
+    // at the moment: https://github.com/whatwg/dom/issues/533
+    // For now simply use a brute-force approach of checking the connectedness
+    // in an interval
+    this.stopObservingTargetElement();
+    this.observeInterval = window.setInterval(() => {
+      if(this.element && !this.element.isConnected) {
+        this.clearElement();
+      }
+    }, OBSERVE_INTERVAL);
+  }
+
+  private stopObservingTargetElement() {
+    window.clearInterval(this.observeInterval);
   }
 }
