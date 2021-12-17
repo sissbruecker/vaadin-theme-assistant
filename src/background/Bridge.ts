@@ -1,5 +1,7 @@
 import Port = chrome.runtime.Port;
 import {
+  cancelPickingMessage,
+  highlightElementMessage,
   Message,
   MessageSource,
   MessageTarget,
@@ -54,6 +56,12 @@ export class Bridge {
       if (port === connection.devtoolsPort) {
         connection.devtoolsPort = undefined;
         console.debug("Unregistered devtools port for tab: " + tabId);
+        // Reset element picker and overlay when closing dev tools - this
+        // should probably live somewhere else
+        if (connection.contentPort) {
+          connection.contentPort.postMessage(cancelPickingMessage());
+          connection.contentPort.postMessage(highlightElementMessage());
+        }
       }
       if (!connection.devtoolsPort && !connection.contentPort) {
         delete this.connectionMap[tabId];
@@ -127,7 +135,8 @@ const getTabId = (port: Port): number => {
 
 const getPortSource = (port: Port): MessageSource | null => {
   if (port.name.startsWith(MessageSource.Content)) return MessageSource.Content;
-  if (port.name.startsWith(MessageSource.Devtools)) return MessageSource.Devtools;
+  if (port.name.startsWith(MessageSource.Devtools))
+    return MessageSource.Devtools;
   return null;
 };
 
