@@ -9,6 +9,7 @@ export class ElementOverlay {
 
   constructor() {
     this.initializeDom();
+    this.setupListeners();
   }
 
   private initializeDom() {
@@ -37,6 +38,14 @@ export class ElementOverlay {
 
     this.overlay = overlay;
     this.label = label;
+  }
+
+  setupListeners() {
+    window.addEventListener("resize", () => {
+      if (this.element) {
+        this.positionOverlay();
+      }
+    });
   }
 
   setElement(element: Element, labelText: string) {
@@ -74,7 +83,7 @@ export class ElementOverlay {
     // in an interval
     this.stopObservingTargetElement();
     this.observeInterval = window.setInterval(() => {
-      if(this.element && !this.element.isConnected) {
+      if (this.element && !this.element.isConnected) {
         this.clearElement();
       }
     }, OBSERVE_INTERVAL);
