@@ -1,16 +1,16 @@
 import Port = chrome.runtime.Port;
 import {
-  Action,
-  ActionSource,
-  ActionTarget,
-  ActionType,
-} from "../shared/actions";
+  Message,
+  MessageSource,
+  MessageTarget,
+  MessageType,
+} from "../shared/messages";
 import { getBrowser } from "../shared/browserApi";
 
 interface Connection {
   devtoolsPort?: Port;
   contentPort?: Port;
-  queuedContentActions: Action[];
+  queuedContentMessages: Message[];
 }
 
 interface ConnectionMap {
@@ -36,16 +36,16 @@ export class Bridge {
       );
     }
 
-    if (portSource === ActionSource.Content) {
+    if (portSource === MessageSource.Content) {
       connection.contentPort = port;
       console.debug("Registered content port for tab: " + tabId);
     }
-    if (portSource === ActionSource.Devtools) {
+    if (portSource === MessageSource.Devtools) {
       connection.devtoolsPort = port;
       console.debug("Registered devtools port for tab: " + tabId);
     }
 
-    port.onMessage.addListener(this.dispatchAction.bind(this));
+    port.onMessage.addListener(this.dispatchMessage.bind(this));
     port.onDisconnect.addListener(() => {
       if (port === connection.contentPort) {
         connection.contentPort = undefined;
@@ -61,45 +61,45 @@ export class Bridge {
     });
   }
 
-  private async dispatchAction(action: Action, port: Port) {
+  private async dispatchMessage(message: Message, port: Port) {
     const tabId = getTabId(port);
 
     if (!tabId) return;
 
     const connection = this.getOrCreateConnection(tabId);
 
-    switch (action.target) {
-      case ActionTarget.Content:
+    switch (message.target) {
+      case MessageTarget.Content:
         ensureContentScript(tabId);
         if (connection.contentPort) {
-          console.log("dispatch to content: ", action);
-          connection.contentPort.postMessage(action);
+          console.log("dispatch to content: ", message);
+          connection.contentPort.postMessage(message);
         } else {
-          connection.queuedContentActions.push(action);
+          connection.queuedContentMessages.push(message);
         }
         break;
-      case ActionTarget.Devtools:
-        console.log("dispatch to devtools: ", action);
+      case MessageTarget.Devtools:
+        console.log("dispatch to devtools: ", message);
         if (connection.devtoolsPort) {
-          connection.devtoolsPort.postMessage(action);
+          connection.devtoolsPort.postMessage(message);
         } else {
           console.warn(
             "No devtools port registered in bridge for tab: " + tabId
           );
         }
         break;
-      case ActionTarget.Background:
-        if (action.type === ActionType.ContentReady) {
+      case MessageTarget.Background:
+        if (message.type === MessageType.ContentReady) {
           console.log("content script ready");
-          if (connection.queuedContentActions.length) {
+          if (connection.queuedContentMessages.length) {
             console.log(
-              `dispatch ${connection.queuedContentActions.length} queued content actions`
+              `dispatch ${connection.queuedContentMessages.length} queued content messages`
             );
             if (connection.contentPort) {
-              connection.queuedContentActions.forEach((queuedAction) => {
-                connection.contentPort!.postMessage(queuedAction);
+              connection.queuedContentMessages.forEach((queuedMessage) => {
+                connection.contentPort!.postMessage(queuedMessage);
               });
-              connection.queuedContentActions = [];
+              connection.queuedContentMessages = [];
             } else {
               console.error("no content port for tab: " + tabId);
             }
@@ -113,7 +113,7 @@ export class Bridge {
     const existingConnection = this.connectionMap[tabId];
     if (existingConnection) return existingConnection;
 
-    const connection: Connection = { queuedContentActions: [] };
+    const connection: Connection = { queuedContentMessages: [] };
     this.connectionMap[tabId] = connection;
 
     return connection;
@@ -125,9 +125,9 @@ const getTabId = (port: Port): number => {
   return parseInt(parts[parts.length - 1]);
 };
 
-const getPortSource = (port: Port): ActionSource | null => {
-  if (port.name.startsWith(ActionSource.Content)) return ActionSource.Content;
-  if (port.name.startsWith(ActionSource.Devtools)) return ActionSource.Devtools;
+const getPortSource = (port: Port): MessageSource | null => {
+  if (port.name.startsWith(MessageSource.Content)) return MessageSource.Content;
+  if (port.name.startsWith(MessageSource.Devtools)) return MessageSource.Devtools;
   return null;
 };
 

@@ -2,10 +2,10 @@ import { expect } from "@esm-bundle/chai";
 import { fixture, html } from "@open-wc/testing";
 import { ElementPicker } from "../../src/content/ElementPicker";
 import {
-  Action,
-  ActionType,
-  PickElementAction,
-} from "../../src/shared/actions";
+  Message,
+  MessageType,
+  PickElementMessage,
+} from "../../src/shared/messages";
 import {
   DatePickerToggleButtonSnapshotTest,
   ElementPickerSnapshotTest,
@@ -32,13 +32,13 @@ describe("ElementPicker", () => {
       el = await fixture(html` <span>Test</span> `);
     });
 
-    it("should send pick element action on click", () => {
+    it("should send pick element message on click", () => {
       elementPicker.start();
       clickElementWithClientPosition(el);
 
       expect(portMock.postMessage.calledOnce).to.be.true;
-      const action = portMock.postMessage.args[0][0] as Action;
-      expect(action.type).to.equal(ActionType.PickElement);
+      const message = portMock.postMessage.args[0][0] as Message;
+      expect(message.type).to.equal(MessageType.PickElement);
     });
 
     it("should not pick elements if it is not started", () => {
@@ -67,18 +67,18 @@ describe("ElementPicker", () => {
     it("should increase pick ref with each pick", () => {
       elementPicker.start();
       clickElementWithClientPosition(el);
-      let pickElementAction = portMock.postMessage.lastCall.args[0];
-      expect(pickElementAction.payload.pickedElement.pickRef).to.equal(1);
+      let pickElementMessage = portMock.postMessage.lastCall.args[0];
+      expect(pickElementMessage.payload.pickedElement.pickRef).to.equal(1);
 
       elementPicker.start();
       clickElementWithClientPosition(el);
-      pickElementAction = portMock.postMessage.lastCall.args[0];
-      expect(pickElementAction.payload.pickedElement.pickRef).to.equal(2);
+      pickElementMessage = portMock.postMessage.lastCall.args[0];
+      expect(pickElementMessage.payload.pickedElement.pickRef).to.equal(2);
 
       elementPicker.start();
       clickElementWithClientPosition(el);
-      pickElementAction = portMock.postMessage.lastCall.args[0];
-      expect(pickElementAction.payload.pickedElement.pickRef).to.equal(3);
+      pickElementMessage = portMock.postMessage.lastCall.args[0];
+      expect(pickElementMessage.payload.pickedElement.pickRef).to.equal(3);
     });
   });
 
@@ -89,11 +89,11 @@ describe("ElementPicker", () => {
 
       clickElementWithClientPosition(snapshot.elementToPick);
 
-      // Verify we received a pick element action
+      // Verify we received a pick element message
       expect(portMock.postMessage.calledOnce).to.be.true;
       const {
         payload: { pickedElement, suggestions },
-      } = portMock.postMessage.args[0][0] as PickElementAction;
+      } = portMock.postMessage.args[0][0] as PickElementMessage;
 
       // Element should match exactly the first element in compose path
       expect(pickedElement.element).to.deep.equal(snapshot.composedPath[0]);

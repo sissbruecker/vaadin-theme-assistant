@@ -4,13 +4,13 @@ import "@vaadin/icons";
 import { html, LitElement } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import {
-  Action,
-  ActionType,
-  cancelPickingAction,
-  highlightElementAction,
-  PickElementAction,
-  startPickingAction,
-} from "../shared/actions";
+  Message,
+  MessageType,
+  cancelPickingMessage,
+  highlightElementMessage,
+  PickElementMessage,
+  startPickingMessage,
+} from "../shared/messages";
 import { lumoStyles } from "../shared/lumo-imports";
 import { ElementPickData } from "../shared/models";
 import {
@@ -41,19 +41,19 @@ class Panel extends LitElement {
   selectedSuggestion?: SelectorSuggestion;
 
   protected firstUpdated() {
-    this.port.onMessage.addListener((action: Action) => {
-      switch (action.type) {
-        case ActionType.PickElement:
-          this.handlePickElement(action);
+    this.port.onMessage.addListener((message: Message) => {
+      switch (message.type) {
+        case MessageType.PickElement:
+          this.handlePickElement(message);
       }
     });
   }
 
   handlePickerClick() {
     if (this.isPicking) {
-      this.port.postMessage(cancelPickingAction());
+      this.port.postMessage(cancelPickingMessage());
     } else {
-      this.port.postMessage(startPickingAction());
+      this.port.postMessage(startPickingMessage());
     }
     this.isPicking = !this.isPicking;
   }
@@ -70,8 +70,8 @@ class Panel extends LitElement {
     this.selectSuggestion(e.detail);
   }
 
-  handlePickElement(action: PickElementAction) {
-    const pickedElement = action.payload.pickedElement;
+  handlePickElement(message: PickElementMessage) {
+    const pickedElement = message.payload.pickedElement;
     const suggestions = getSelectorSuggestions(pickedElement);
 
     this.isPicking = false;
@@ -85,7 +85,7 @@ class Panel extends LitElement {
   }
 
   highlightSuggestion(suggestion?: SelectorSuggestion) {
-    this.port.postMessage(highlightElementAction(suggestion));
+    this.port.postMessage(highlightElementMessage(suggestion));
   }
 
   selectSuggestion(suggestion?: SelectorSuggestion) {

@@ -3,7 +3,7 @@ import {
   ElementDataAttributes,
   ElementPickData,
 } from "../shared/models";
-import { pickElementAction } from "../shared/actions";
+import { pickElementMessage } from "../shared/messages";
 import { ElementOverlay } from "./ElementOverlay";
 import {
   formatSuggestionTitle,
@@ -134,7 +134,7 @@ export class ElementPicker {
       this.highlight(firstSuggestionOrUndefined);
     } else {
       // Otherwise notify dev tools panel about pick and suggestions
-      this.port.postMessage(pickElementAction(data, suggestions));
+      this.port.postMessage(pickElementMessage(data, suggestions));
     }
   }
 }
