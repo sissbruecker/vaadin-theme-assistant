@@ -1,7 +1,7 @@
-import { getBrowser } from "../shared/browserApi";
-import { ActionSource, injectContentScriptAction } from "../shared/actions";
 import { html, render } from "lit";
-import './panel';
+import { ActionSource } from "../shared/actions";
+import { getBrowser } from "../shared/browserApi";
+import "./panel";
 
 export function app() {
   const browser = getBrowser();
@@ -9,10 +9,9 @@ export function app() {
     name: `${ActionSource.Devtools}/${browser.devtools.inspectedWindow.tabId}`,
   });
 
-  port.postMessage(
-    injectContentScriptAction(browser.devtools.inspectedWindow.tabId)
-  );
-
   // Render app
-  render(html`<th-panel .port="${port}"></th-panel>`, document.getElementById("app")!);
+  render(
+    html`<th-panel .port="${port}"></th-panel>`,
+    document.getElementById("app")!
+  );
 }

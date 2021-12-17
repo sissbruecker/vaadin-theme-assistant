@@ -13,7 +13,7 @@ export enum ActionSource {
 }
 
 export enum ActionType {
-  InjectContentScript = "injectContentScript",
+  ContentReady = "contentReady",
   StartPicking = "startPicking",
   CancelPicking = "cancelPicking",
   PickElement = "pickElement",
@@ -26,21 +26,16 @@ interface ActionBase<TPayload = {}> {
   payload: TPayload;
 }
 
-export interface InjectContentScriptAction
-  extends ActionBase<{
-    tabId: number;
-  }> {
-  type: ActionType.InjectContentScript;
+export interface ContentReadyAction extends ActionBase {
+  type: ActionType.ContentReady;
 }
 
-export function injectContentScriptAction(
-  tabId: number
-): InjectContentScriptAction {
+export function contentReadyAction(): ContentReadyAction {
   return {
-    type: ActionType.InjectContentScript,
+    type: ActionType.ContentReady,
     target: ActionTarget.Background,
-    payload: { tabId },
-  };
+    payload: {}
+  }
 }
 
 export interface StartPickingAction extends ActionBase {
@@ -109,7 +104,7 @@ export function highlightElementAction(
 }
 
 export type Action =
-  | InjectContentScriptAction
+  | ContentReadyAction
   | StartPickingAction
   | CancelPickingAction
   | PickElementAction

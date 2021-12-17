@@ -1,19 +1,33 @@
 import { ElementPicker } from "./ElementPicker";
 import { getBrowser } from "../shared/browserApi";
-import { Action, ActionSource, ActionType } from "../shared/actions";
+import {
+  Action,
+  ActionSource,
+  ActionType,
+  contentReadyAction,
+} from "../shared/actions";
+import Port = chrome.runtime.Port;
 
-// @ts-ignore
-const isInstalled = window.Vaadin.themeassistant.installed;
+declare global {
+  interface Window {
+    vaadin_theme_assistant: {
+      installed: boolean;
+      tabId: number;
+      port: Port;
+    };
+  }
+}
+
+const isInstalled = window.vaadin_theme_assistant.installed;
 
 if (!isInstalled) {
   install();
-  // @ts-ignore
-  window.Vaadin.themeassistant.installed = true;
+  window.vaadin_theme_assistant.installed = true;
+  window.vaadin_theme_assistant.port.postMessage(contentReadyAction());
 }
 
 function install() {
-  // @ts-ignore
-  const tabId = window.Vaadin.themeassistant.tabId;
+  const tabId = window.vaadin_theme_assistant.tabId;
 
   let elementPicker: ElementPicker;
 
@@ -38,4 +52,6 @@ function install() {
   elementPicker = new ElementPicker(port);
 
   port.onMessage.addListener(handleContentAction);
+
+  window.vaadin_theme_assistant.port = port;
 }

@@ -1,14 +1,16 @@
 import Port = chrome.runtime.Port;
 import {
   Action,
-  ActionHandler,
   ActionSource,
   ActionTarget,
+  ActionType,
 } from "../shared/actions";
+import { getBrowser } from "../shared/browserApi";
 
 interface Connection {
   devtoolsPort?: Port;
   contentPort?: Port;
+  queuedContentActions: Action[];
 }
 
 interface ConnectionMap {
@@ -18,7 +20,7 @@ interface ConnectionMap {
 export class Bridge {
   private connectionMap: ConnectionMap = {};
 
-  constructor(private backgroundActionHandler: ActionHandler) {}
+  constructor() {}
 
   registerPort(port: Port) {
     const tabId = getTabId(port);
@@ -59,7 +61,7 @@ export class Bridge {
     });
   }
 
-  private dispatchAction(action: Action, port: Port) {
+  private async dispatchAction(action: Action, port: Port) {
     const tabId = getTabId(port);
 
     if (!tabId) return;
@@ -68,13 +70,12 @@ export class Bridge {
 
     switch (action.target) {
       case ActionTarget.Content:
-        console.log("dispatch to content: ", action);
+        ensureContentScript(tabId);
         if (connection.contentPort) {
+          console.log("dispatch to content: ", action);
           connection.contentPort.postMessage(action);
         } else {
-          console.warn(
-            "No content port registered in bridge for tab: " + tabId
-          );
+          connection.queuedContentActions.push(action);
         }
         break;
       case ActionTarget.Devtools:
@@ -88,7 +89,22 @@ export class Bridge {
         }
         break;
       case ActionTarget.Background:
-        this.backgroundActionHandler(action);
+        if (action.type === ActionType.ContentReady) {
+          console.log("content script ready");
+          if (connection.queuedContentActions.length) {
+            console.log(
+              `dispatch ${connection.queuedContentActions.length} queued content actions`
+            );
+            if (connection.contentPort) {
+              connection.queuedContentActions.forEach((queuedAction) => {
+                connection.contentPort!.postMessage(queuedAction);
+              });
+              connection.queuedContentActions = [];
+            } else {
+              console.error("no content port for tab: " + tabId);
+            }
+          }
+        }
         break;
     }
   }
@@ -97,7 +113,7 @@ export class Bridge {
     const existingConnection = this.connectionMap[tabId];
     if (existingConnection) return existingConnection;
 
-    const connection: Connection = {};
+    const connection: Connection = { queuedContentActions: [] };
     this.connectionMap[tabId] = connection;
 
     return connection;
@@ -113,4 +129,20 @@ const getPortSource = (port: Port): ActionSource | null => {
   if (port.name.startsWith(ActionSource.Content)) return ActionSource.Content;
   if (port.name.startsWith(ActionSource.Devtools)) return ActionSource.Devtools;
   return null;
+};
+
+const ensureContentScript = (tabId: number) => {
+  const browser = getBrowser();
+
+  // store tab id for content script
+  browser.tabs.executeScript(tabId, {
+    code: `
+      window.vaadin_theme_assistant = window.vaadin_theme_assistant || {};
+      window.vaadin_theme_assistant.tabId = ${tabId};
+    `,
+  });
+  // load content script
+  browser.tabs.executeScript(tabId, {
+    file: "build/content.js",
+  });
 };
