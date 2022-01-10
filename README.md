@@ -19,7 +19,9 @@ The application needs to use a [custom theme](https://vaadin.com/docs/latest/ds/
 
 ## Installation
 
-There is no release yet. Follow the Development instructions for installing a development build of the extension in your browser.
+Chrome: [Chrome Web Store](https://chrome.google.com/webstore/detail/vaadin-theme-assistant/appljeomkgjhafplceofapmechoilnhb)
+
+Firefox: [Firefox Addon Store](https://addons.mozilla.org/de/firefox/addon/vaadin-theme-assistant/)
 
 ## Usage
 
