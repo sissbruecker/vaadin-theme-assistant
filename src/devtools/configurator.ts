@@ -201,7 +201,7 @@ export class Configurator extends LitElement {
                 @selected-changed="${this.handleThemeNameCodeTabChange}"
               >
                 <vaadin-tab>Flow</vaadin-tab>
-                <vaadin-tab>Fusion</vaadin-tab>
+                <vaadin-tab>Hilla</vaadin-tab>
               </vaadin-tabs>
             </vaadin-horizontal-layout>
             <ol>
