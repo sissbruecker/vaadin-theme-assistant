@@ -148,6 +148,12 @@ function getElementAtPoint(
 
   if (!element) return null;
 
+  // ShadowRoot.elementFromPoint sometimes returns the host (when hovering slotted text node?)
+  // Avoid recursion by just returning the host itself
+  if (element === (root as any).host) {
+    return element;
+  }
+
   if (element.shadowRoot) {
     return getElementAtPoint(
       element.shadowRoot as unknown as HasElementFromPoint,
